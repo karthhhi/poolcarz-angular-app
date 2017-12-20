@@ -1,0 +1,62 @@
+<div class="container panelpos-bookride" >
+  <div class="row">
+    <div class="col-xs-7 col-xs-offset-3">
+      <div class='panel panel-primary'>
+        <div class='panel-heading'>Book a ride</div>
+        <div class='panel-body'>
+          <p>Pool Carz is an online application which enable users to share rides with others. You can either book a ride or
+            offer a ride. Did we mention that this app is advertisement free? To add on top of that its free of cost! So
+            what are you waiting for ? Check out the rides available and start PCing!! </p>
+          <div class="row margin-top-20">
+            <div class="col-xs-12 text-center">
+              <button [ngClass]="{'btn-primary':!buttonToggle,'button-active':buttonToggle}" class='btn floating-button' (click)="toogleDisplayRides()">
+                Show All Rides
+              </button>
+              <button *ngIf="displayRides" [ngClass]="{'btn-primary':!buttonToggleTo,'button-active':buttonToggleTo}" class='btn btn-primary floating-button' (click)="showRides('to_infosys')">
+                  To Infosys
+                </button>
+              <button *ngIf="displayRides" [ngClass]="{'btn-primary':!buttonToggleFrom,'button-active':buttonToggleFrom}" class='btn btn-primary floating-button' (click)="showRides('from_infosys')">
+                  From Infosys
+                </button>
+              <button *ngIf="displayRides" [ngClass]="{'btn-primary':!buttonToggleOther,'button-active':buttonToggleOther}" class='btn btn-primary floating-button' (click)="showRides('others')">
+                  Others
+              </button>
+            </div>
+          </div>
+          <div *ngIf="displayRides" class="row margin-top-20">
+            <div class="col-xs-12 text-center">
+              <p class="blue-text">Please select a ride!</p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Start Point</th>
+                    <th>End Point</th>
+                    <th>Seats Available</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let ride of ridesArray | rideFilter:rideFilterOption" [appMouseHover]='' (click)="showRideDetails(ride)">
+                    <td>{{ ride.pickUp }}</td>
+                    <td>{{ ride.destination }}</td>
+                    <td>{{ ride.seatsLeft }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div *ngIf="showSelectedRide" class="row margin-top-20">
+            <div class="col-xs-12 text-center">
+              <app-ride-details [selectedRide]="selectedRideObj" (onBookRide)="bookRideComplete($event)"></app-ride-details>
+            </div>
+          </div>
+
+          <div class="row margin-top-20">
+            <div class="col-xs-4 col-xs-offset-4 text-center">
+              <a class="btn btn-primary" [routerLink]='["/offer-ride"]'>Offer A Ride!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  

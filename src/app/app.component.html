@@ -1,0 +1,21 @@
+<div>
+  <nav class='navbar navbar-default navbar-fixed-top'>
+    <div class='container-fluid'>
+      <div class="navbar-header">
+        <a class="navbar-brand txtcolor" href="#">PoolCarz</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+            <li><a class="txtcolor" [routerLink]='["/"]'>{{ status }}</a></li>        
+      </ul>
+    </div>
+  </nav>
+    <router-outlet></router-outlet>
+  <footer class="footer">
+    <div class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <p class="navbar-text">Copyright &copy; UI & Markup Team, Infosys Limited
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>

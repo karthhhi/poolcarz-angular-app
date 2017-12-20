@@ -1,0 +1,43 @@
+  <div class="row">
+    <div class="col-xs-12">
+      <div class='panel panel-primary'>
+        <div class='panel-heading'>Ride Details</div>
+        <div class='panel-body'>
+          <div class="row margin-top-10">
+            <div class="col-xs-12 text-center">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Car</th>
+                    <th>Seats Left</th>
+                    <th>Pick-up Point</th>
+                    <th>Destination</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{ selectedRide.id }}</td>
+                    <td>{{ selectedRide.name }}</td>
+                    <td>{{ selectedRide.car }}</td>
+                    <td>{{ selectedRide.seatsLeft }}</td>
+                    <td>{{ selectedRide.pickUp }}</td>
+                    <td>{{ selectedRide.destination }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row margin-top-10">
+            <div class="col-xs-4 col-xs-offset-4 text-center">
+              <p [ngClass]="{'info-text':!isError,'error-text':isError}">{{ bookStatus }}</p>
+              <button [ngClass]="{'btn-danger':makeCancelButton,'btn-primary':!makeCancelButton}" class='btn' (click)='bookRideStart(selectedRide.id)'>
+						 	  {{ bookButtonText }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

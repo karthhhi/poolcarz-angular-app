@@ -1,0 +1,24 @@
+.floating-button {
+    display:inline-block;
+    margin: 2px;
+}
+
+.panelpos-bookride {
+    position: relative;
+    top: 60px;
+    bottom: 60px;
+    margin-bottom:80px;
+}
+
+th {
+    color:#FFFFFF;
+    background-color: #337ab7;
+    border-color: #337ab7;
+    text-align: center;
+} 
+
+.button-active, .button-active:focus ,.button-active:hover {
+     background-color:#38B7AC;
+     color:#FFFFFF;
+}
+

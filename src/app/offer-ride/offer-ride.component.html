@@ -1,0 +1,66 @@
+<div class="container panelpos-offerride">
+  <div class="row">
+    <div class="col-xs-7 col-xs-offset-3">
+      <div class='panel panel-primary'>
+        <div class='panel-heading'>Car Ride Registration Form</div>
+        <div class='panel-body'>
+          <form [formGroup]="offerRideForm">
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" formControlName="name">
+              <div *ngIf="offerRideForm.controls['name'].errors && !offerRideForm.controls['name'].pristine" class="text-danger">
+                <div [hidden]="!offerRideForm.controls['name'].errors.required" class="error">Name is required.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="pickUp">Start Location</label>
+              <input type="text" class="form-control" id="pickUp" formControlName="pickUp">
+              <div *ngIf="offerRideForm.controls['pickUp'].errors && !offerRideForm.controls['pickUp'].pristine" class="text-danger">
+                <div [hidden]="!offerRideForm.controls['pickUp'].errors.required" class="error">Location is required.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="destination">Destination</label>
+              <input type="text" class="form-control" id="destination" formControlName="destination">
+              <div *ngIf="offerRideForm.controls['destination'].errors && !offerRideForm.controls['destination'].pristine" class="text-danger">
+                <div [hidden]="!offerRideForm.controls['destination'].errors.required" class="error">Location is required.</div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="car">Car</label>
+              <input type="text" class="form-control" id="car" formControlName="car">
+              <div *ngIf="offerRideForm.controls['car'].errors && !offerRideForm.controls['car'].pristine" class="text-danger">
+                <div [hidden]="!offerRideForm.controls['car'].errors.required" class="error">Car name is required.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="seatsLeft">Seat Available</label>
+              <input type="number" class="form-control" id="seatsLeft" formControlName="seatsLeft">
+              <div *ngIf="offerRideForm.controls['seatsLeft'].errors && !offerRideForm.controls['seatsLeft'].pristine" class="text-danger">
+                <div [hidden]="!offerRideForm.controls['seatsLeft'].errors.required" class="error">Enter seats available.</div>
+                <div *ngIf="!offerRideForm.controls['seatsLeft'].errors.required" [hidden]="!offerRideForm.controls['seatsLeft'].errors.numberValid" class="error">Seats should be greater than 0 and less than 8.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <span class="">
+                <button (click)="addRide()" [disabled]="!offerRideForm.valid" class="btn btn-primary">Submit</button>
+                <a class="btn btn-primary" [routerLink]='["/book-ride"]'>Go Back</a>
+              </span>
+            </div>
+
+            <div class="form-group">
+              <p class="text-success text-center">{{ successMsg }}</p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

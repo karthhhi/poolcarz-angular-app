@@ -1,0 +1,200 @@
+h1 {
+	color: #369;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 250%;
+}
+
+.divider-vertical {
+	height: 50px;
+	margin: 0 9px;
+	border-left: 1px solid #F2F2F2;
+	border-right: 1px solid #FFF;
+}
+
+.ng-valid[required] {
+	border-left: 5px solid #42A948; /* green */
+}
+
+.ng-dirty.ng-invalid[required] {
+	border-left: 5px solid #a94442; /* red */
+}
+
+.checkbox {
+	padding-left: 20px;
+}
+
+.checkbox label {
+	display: inline-block;
+	position: relative;
+	padding-left: 5px;
+}
+
+.checkbox label::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 17px;
+	height: 17px;
+	left: 0;
+	margin-left: -20px;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	background-color: #fff;
+	-webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+	-o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+	transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.checkbox label::after {
+	display: inline-block;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	left: 0;
+	top: 0;
+	margin-left: -20px;
+	padding-left: 3px;
+	padding-top: 1px;
+	font-size: 11px;
+	color: #555555;
+}
+
+.checkbox input[type="checkbox"] {
+	opacity: 0;
+}
+
+.checkbox input[type="checkbox"]:focus+label::before {
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+.checkbox input[type="checkbox"]:checked+label::after {
+	font-family: 'FontAwesome';
+	content: "\f00c";
+}
+
+.row.vdivide [class*='col-']:not (:last-child ):after {
+	background: #e0e0e0;
+	width: 2px;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	min-height: 70px;
+}
+
+
+/********************************************************************/
+/*** PANEL PRIMARY ***/
+.nav-tabs {
+	border-bottom: 2px solid #ff0080;
+	
+	outline:none;
+
+	border:none;
+	
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover
+	{
+	border-width: 0;
+
+border:none;
+}
+
+.nav-tabs>li>a {
+	border: none;
+	color: #0080c0;
+
+}
+
+.nav-tabs>li.active>a {
+	border: none;
+	color: #ff0080!important;
+	background: transparent;
+
+}
+
+.nav-tabs>li>a::after {
+	content: "";
+	background: #ff0080;
+	height: 2px;
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	bottom: -1px;
+	transition: all 250ms ease 0s;
+	transform: scale(0);
+	outline:none;
+}
+
+.nav-tabs>li.active>a::after/*, .nav-tabs>li:hover>a::after */{
+	transform: scale(1);
+	
+	
+}
+
+.tab-nav>li>a::after {
+	background: #ff0080 none repeat scroll 0% 0%;
+	color: #fff;
+	
+}
+
+.with-nav-tabs.panel-primary .nav-tabs > .open > a,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+	color: #0000ff;
+	background-color: #fff;
+	border-color: transparent;
+}
+
+.txtcolor{
+    color: #ff0080 !important;
+}
+.ratingcolor{
+    color: #ff8040;
+}
+.panelpos{
+    position: relative; 
+    top: 180px;
+	width:50%;
+}
+
+.errorcolor{
+	color: red;
+}
+
+
+/*** Custom ***/
+
+.margin-top-20{
+	margin-top: 20px
+}
+
+.margin-top-10{
+	margin-top: 10px
+}
+
+.info-text {
+	font-size: 11px;
+    color: grey;
+}
+
+.error-text {
+	font-size: 11px;
+    color: red;
+}
+
+.blue-text{
+	color: #0080c0;
+}
+
+.error{
+    color: red;
+    position:relative;
+}

@@ -1,0 +1,38 @@
+[
+    {
+    "id": 1,
+    "offerId": "OI123",
+    "name": "James Bond" ,
+    "car": "Mercedez" ,
+    "seatsLeft": 3,
+    "pickUp": "Vanrose Junction",
+    "destination": "Infosys"
+  },
+  {
+    "id":2,
+    "offerId": "OI456",
+    "name": "Karthik" ,
+    "car": "Swift" ,
+    "seatsLeft": 2,
+    "pickUp": "PTP",
+    "destination": "Infosys"
+  },
+  {
+    "id": 3,
+    "offerId": "OI789",
+    "name": "Batman" ,
+    "car": "Batmobile" ,
+    "seatsLeft": 7,
+    "pickUp": "Infosys",
+    "destination": "East-Fort"
+  },
+  {
+    "id": 4,
+    "offerId": "OI001",
+    "name": "Ride4" ,
+    "car": "HondaCity" ,
+    "seatsLeft": 5,
+    "pickUp": "Infosys",
+    "destination": "Central Mall"
+  }
+] 
